@@ -940,7 +940,7 @@ impl sealed::BytesAdapter for Vec<u8> {
         B: Buf,
     {
         self.clear();
-        self.reserve(buf.remaining());
+        self.reserve_exact(buf.remaining());
         self.put(buf);
     }
 
